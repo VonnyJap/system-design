@@ -30,3 +30,31 @@
 - Alerting system
 - Visualization system
 
+#### How does Promotheus work?
+- Data Retrieval worker that takes data from application and services
+  - units of measurement is called metrics
+- Storage: that stores metrics data
+- HTTP server: that accepts queries from UI/Dashboard like Grafana
+
+#### Collecting metrics from targets
+- data retrieval worker pulls over HTTP from /metrics endpoint
+- must be in correct format
+- exporter needs to be installed to convert metrics to something that promotheus understands
+- configure promotheus to scrape this endpoint
+- client library to expose data to certain endpoint
+- pull mechanism
+- pushgateway
+- service discovery to find the targets to scrape
+
+#### Configuring
+- rules
+- jobs
+- interval
+
+#### Tasks
+- Look at how promotheus is configured
+- Implement this using an application or kubernetes cluster
+
+#### Consistent hashing
+- based on the host IP assigns a range of hash
+- hence when new host is added only a part of hash range needs to be recalculated

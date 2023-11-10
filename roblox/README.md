@@ -1,0 +1,18 @@
+- How would you go about designing a proximity server?
+- How would you go about designing a 3D game?
+- How would you go about setting network protocols while designing a game?
+- How are caching and sharding techniques applicable in game development?
+- How would you go about designing a file-sharing service like Dropbox?
+- How would you integrate cloud features in game development?
+- How would you go about designing a chatbot service?
+- How would you ensure that your system is secure to end-users?
+  - Think about athenz, RABC system
+    - user is known to the system
+    - the system will issue user cert/key and signed with certificate authority
+    - all application servers should have ca authority installed
+    - username can be extracted from the cert/key
+    - and then upon that the requested scope can be checked and token can be issued for subsequent uses 
+Think about okta
+- How would you approach the design of a platform like Instagram?
+- What scalable features would you consider while designing an e-commerce website?
+- How would you integrate in-game messaging while designing a 3D game?

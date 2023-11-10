@@ -23,3 +23,9 @@
 ### Zookeeper
 - registry for large distributed systems. 
 - It is beneficial for tasks like master election, crash detection and managing meta data related to distributed systems.
+
+### Cache expired
+- normally for write request, we should perform a write back to avoid inconsistency
+
+### Memcached vs Redis
+
