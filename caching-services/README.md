@@ -3,6 +3,7 @@
 - Need to be served from storage within the machine
 - Distributed cache is a caching system where multiple cache servers coordinate to store frequently accessed data
 - locality of reference principle
+- caching is expensive, it is based on RAM because it needs to be fast
 
 ### How Distributed Cache Works 
 - using hashtable to map object values and keys
@@ -28,4 +29,11 @@
 - normally for write request, we should perform a write back to avoid inconsistency
 
 ### Memcached vs Redis
+- Pros and cons
+
+### Eviction policy
+- LRU (Least Recently Used)
+- LFU (Least Frequently Used)
+- MRU (Most Recently Used)
+
 

@@ -83,5 +83,14 @@ Compilation of System Design
   - Memory for cache
 - API design
 
+
+### CDN vs Cache
+- CDN is normally used caching static web content so everything static can be served first to users
+- Cache on the other hand is to store query results and complement persistent storage like DB
+- Ref: https://stackoverflow.com/questions/63409344/difference-between-azure-reddis-cache-and-azure-cdn
+- static file can be saved in cache like redis in the form of array of bytes
+
 #### References
 [The Design Patterns for Distributed Systems Handbook – Key Concepts Every Developer Should Know](https://www.freecodecamp.org/news/design-patterns-for-distributed-systems/)
+[System Design Full Course](https://www.youtube.com/playlist?list=PLTCrU9sGyburBw9wNOHebv9SjlE4Elv5a)
+[Byte byte Go](https://www.youtube.com/@ByteByteGo)

@@ -214,6 +214,9 @@ hence minimizing the lost of data
 - Consistent: ensuring the integrity of pk and fk
 - Isolation: database transactions are capable of being concurrently processed with no conflicts. If we need to ensure race condition protection, then we can secure with locks.
 - Durability: data transactions ensure that the data is saved.
+- So in mySQL for example because of ACID property and transaction locking, one might read old data but might not read inconsistent data. At most if programs want to deploy the most update data, it needs to show the committed data. 
+- but in noSQL, data can be partially updated because no ACID properties, eventual consistency.
+  - Whereas in an "eventually consistent" system, you might read data that is partially updated, where the one account has been debited but the second account has not yet been credited. So you can see inconsistent data.
 
 #### Consistent hashing in db management or sharding?
 - for sharding to work, there will be a node manager which tells which node manages which key and that node manager is probably the only thing that the client knows and it needs to make the request to the node in particular
@@ -237,4 +240,15 @@ hence minimizing the lost of data
 - Recovery logs
 
 What about doing ELB monitoring using Promotheus?
+
+### Partition Technique
+- Range based partitioning
+  - cons: can introduce hotspots if data is not uniformly distributed
+- Hash partitioning
+
+### Consistent Hashing
+- Both values and servers are hashed to the circle angle (0-360)
+- They are sharing same output range
+- Values can be mapped to servers clockwise or anticlockwise
+- can use virtual nodes to distribute more nodes to make the distribution of servers more uniform
 
